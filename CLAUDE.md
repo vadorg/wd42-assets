@@ -1,25 +1,29 @@
 # CLAUDE.md
 
-**Сначала прочитай [wd42-hq/CLAUDE.md](https://github.com/vadorg/wd42-hq/blob/main/CLAUDE.md):** правила работы, карта, продуктовые решения. Здесь только правила этого репо.
+**Read [wd42-hq/CLAUDE.md](https://github.com/vadorg/wd42-hq/blob/main/CLAUDE.md) first:** working rules, map, product decisions. This file only covers this repo.
 
-## Проект
+## Project
 
-wd42-assets: **публичный** репо. Медиа для покупателей шаблонов и видео-превью для сайта. Раздаётся через jsDelivr.
+wd42-assets: a **public** repo. Media for template buyers and video previews for the site. Served via jsDelivr.
 
-## Структура
+## Language
+
+Everything in this repo is public, so everything is in English: README, CLAUDE.md, file names, descriptions, commit messages, and any text inside files (for example SVG comments). No Cyrillic.
+
+## Structure
 
 ```
-templates/<название>/<файл>   ассеты шаблона для покупателя (картинки, видео, 3D)
-previews/<название>.mp4       видео-превью для карточки на сайте
+templates/<name>/<file>   template assets for the buyer (images, video, 3D)
+previews/<name>.mp4       video preview for the site card
 ```
 
-`<название>` как в `wd42-content/templates/`.
+`<name>` matches the folder in `wd42-content/templates/`.
 
-## Ключевые решения
+## Key decisions
 
-- Здесь только медиа. Никаких промптов, кода шаблонов, meta.md, ключей и личных данных: репо видят все
-- Файлы кладёт скрипт `assets` или `publish` из wd42-content. Пока скриптов нет, руками по этим же правилам
-- Файл до 20 МБ. Картинки webp или avif, видео mp4 (H.264), 3D glb
-- Ссылка всегда с коммитом: `https://cdn.jsdelivr.net/gh/vadorg/wd42-assets@<commit>/templates/<название>/<файл>`
-- Историю не переписывать (без force push и rebase main): на коммиты ссылаются проданные промпты
-- Файл не удалять и не перезаписывать. Новая версия = новое имя файла
+- Media only. No prompts, template code, meta.md, keys or personal data: everyone can see this repo
+- Files are added by the `assets` or `publish` script from wd42-content. Until the scripts exist, add them by hand following the same rules
+- Max file size 20 MB. Images: webp or avif. Video: mp4 (H.264). 3D: glb
+- Always link with a commit: `https://cdn.jsdelivr.net/gh/vadorg/wd42-assets@<commit>/templates/<name>/<file>`
+- Never rewrite history (no force push, no rebase of main): sold prompts link to commits
+- Never delete or overwrite a file. A new version gets a new file name
