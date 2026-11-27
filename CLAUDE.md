@@ -26,4 +26,6 @@ previews/<name>.mp4       video preview for the site card
 - Max file size 20 MB. Images: svg, png, jpg, webp or avif. Video: mp4 (H.264). 3D: glb (preferred), gltf with its bin, usdz, obj, fbx, stl, ply, drc. SVG, gltf and obj files must contain no Cyrillic text
 - Always link with a commit: `https://cdn.jsdelivr.net/gh/vadorg/wd42-assets@<commit>/templates/<name>/<file>`
 - Never rewrite history (no force push, no rebase of main): sold prompts link to commits
-- Never delete or overwrite a file. A new version gets a new file name
+- Never overwrite a file. A new version gets a new file name
+- Never delete buyer assets in `templates/`: sold prompts link to them
+- Preview videos in `previews/` that the site no longer uses (old versions) may be deleted in a new commit. History stays, so links pinned to older commits keep working (Wado, 27.11.2026)
